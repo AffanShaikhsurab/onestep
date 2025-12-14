@@ -1,0 +1,31 @@
+# This file configures the analyzer for Dart code quality
+include: package:flutter_lints/flutter.yaml
+
+linter:
+  rules:
+    # Code Style
+    prefer_single_quotes: true
+    prefer_const_constructors: true
+    prefer_const_declarations: true
+    prefer_final_fields: true
+    prefer_final_locals: true
+    
+    # Documentation
+    public_member_api_docs: false
+    
+    # Safety
+    avoid_print: true
+    avoid_dynamic_calls: false
+    
+    # Best Practices
+    prefer_relative_imports: true
+    always_use_package_imports: false
+
+analyzer:
+  errors:
+    missing_required_param: error
+    missing_return: error
+  exclude:
+    - "**/*.g.dart"
+    - "**/*.freezed.dart"
+    - "**/*.mocks.dart"

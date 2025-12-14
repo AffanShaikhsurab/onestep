@@ -1,0 +1,152 @@
+# ============================================
+# OneStep - Git Ignore Configuration
+# ============================================
+
+# -------------------- Environment & Secrets --------------------
+# NEVER commit these files - they contain sensitive data
+.env
+.env.local
+.env.development
+.env.staging
+.env.production
+!.env.example
+secrets/
+*.pem
+*.key
+*.secret
+
+# -------------------- Flutter/Dart --------------------
+# Dart/Flutter generated files
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+build/
+coverage/
+
+# Generated code
+*.g.dart
+*.freezed.dart
+*.mocks.dart
+*.config.dart
+
+# Flutter specific
+**/doc/api/
+**/ios/Flutter/.last_build_id
+flutter_*.log
+
+# -------------------- IDE & Editor --------------------
+# VS Code
+.vscode/
+*.code-workspace
+
+# IntelliJ/Android Studio
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Other editors
+.atom/
+.sublime-*
+*.swp
+*.swo
+*~
+
+# -------------------- OS Generated --------------------
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+.directory
+
+# -------------------- Build Artifacts --------------------
+/build/
+/android/app/debug
+/android/app/profile
+/android/app/release
+/android/.gradle/
+/ios/Pods/
+/ios/.symlinks/
+/ios/Flutter/Flutter.framework
+/ios/Flutter/Flutter.podspec
+
+# Web build
+/web/build/
+
+# -------------------- Firebase --------------------
+.firebase/
+.firebaserc
+firebase-debug.log
+firestore-debug.log
+ui-debug.log
+pubsub-debug.log
+
+# -------------------- Node.js (tooling) --------------------
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+# -------------------- Testing --------------------
+coverage/
+*.lcov
+.test_coverage/
+
+# -------------------- Logs & Temp Files --------------------
+*.log
+log.txt
+logs/
+*.tmp
+*.temp
+*.bak
+*.backup
+
+# -------------------- Project Specific --------------------
+# Config files with sensitive data
+appwrite.config.json
+firebase.json
+google-services.json
+GoogleService-Info.plist
+
+# Internal documentation (not for public)
+/docs/internal/
+/AUTHENTICATION_FIX.md
+/BATCH_COMPLETION_FIX.md
+/*_FIX.md
+/*_COMPLETE.md
+/*_REPORT.md
+/*_GUIDE.md
+/*_SUMMARY.md
+
+# Experimental/temporary code
+*.experimental
+*.wip
+fix_*.dart
+test_*.dart
+COPY_TO_*.txt
+
+# History folders from various tools
+.history/
+.qodo/
+.serena/
+.tare/
+.trae/
+
+# -------------------- Symbolication & Obfuscation --------------------
+app.*.symbols
+app.*.map.json
