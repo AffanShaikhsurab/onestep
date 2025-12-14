@@ -53,6 +53,7 @@ class AppConstants {
   static const String tableAffirmations = 'affirmations';
   static const String tableNotifications = 'notifications';
   static const String tableHabitStacks = 'habit_stacks';
+  static const String habitCompletionsTable = 'habit_completions';
   
   // Collection IDs for Appwrite
   static String get usersCollectionId => tableUsers;

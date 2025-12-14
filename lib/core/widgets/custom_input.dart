@@ -11,6 +11,7 @@ class CustomTextField extends StatefulWidget {
   final String? hint;
   final String? helperText;
   final String? errorText;
+  final String? initialValue;
   final TextEditingController? controller;
   final TextInputType? keyboardType;
   final bool obscureText;
@@ -32,6 +33,7 @@ class CustomTextField extends StatefulWidget {
     this.hint,
     this.helperText,
     this.errorText,
+    this.initialValue,
     this.controller,
     this.keyboardType,
     this.obscureText = false,
@@ -79,6 +81,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
           const SizedBox(height: 8),
         ],
         TextFormField(
+          initialValue: widget.initialValue,
           controller: widget.controller,
           focusNode: widget.focusNode,
           keyboardType: widget.keyboardType,
@@ -152,7 +155,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
 class CustomDropdown<T> extends StatelessWidget {
   final String? label;
   final String? hint;
-  final T? value;
+  final T? initialValue;
   final List<DropdownMenuItem<T>> items;
   final void Function(T?)? onChanged;
   final String? Function(T?)? validator;
@@ -162,7 +165,7 @@ class CustomDropdown<T> extends StatelessWidget {
     super.key,
     this.label,
     this.hint,
-    this.value,
+    this.initialValue,
     required this.items,
     this.onChanged,
     this.validator,
@@ -187,7 +190,7 @@ class CustomDropdown<T> extends StatelessWidget {
           const SizedBox(height: 8),
         ],
         DropdownButtonFormField<T>(
-          value: value,
+          value: initialValue,
           items: items,
           onChanged: enabled ? onChanged : null,
           validator: validator,

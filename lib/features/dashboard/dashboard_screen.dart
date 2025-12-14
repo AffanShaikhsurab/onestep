@@ -78,7 +78,7 @@ class DashboardScreen extends StatelessWidget {
             ),
             const SizedBox(height: 16),
             const EmptyStateWidget(
-              message: 'No habits yet',
+              title: 'No habits yet',
               icon: Icons.check_circle_outline,
             ),
             const SizedBox(height: 32),

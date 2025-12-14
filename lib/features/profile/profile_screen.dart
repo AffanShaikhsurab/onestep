@@ -197,7 +197,7 @@ class ProfileScreen extends StatelessWidget {
           TextButton(
             onPressed: () {
               Navigator.of(dialogContext).pop();
-              context.read<AuthenticationBloc>().add(const LogoutRequested());
+              context.read<AuthenticationBloc>().add(AuthenticationLogoutRequested());
             },
             child: const Text(
               'Log Out',

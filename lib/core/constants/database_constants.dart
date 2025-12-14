@@ -6,6 +6,7 @@ import '../env/app_config.dart';
 class DatabaseConstants {
   // Database ID from environment
   static String get databaseId => AppConfig.appwriteDatabaseId;
+  static String get mainDatabaseId => AppConfig.appwriteDatabaseId;
   
   // Collection Names
   static const String usersCollection = 'users';
@@ -30,7 +31,10 @@ class DatabaseConstants {
   // Collection getters
   static String get usersTable => usersCollection;
   static String get habitsTable => habitsCollection;
+  static String get habitsCollectionId => habitsCollection;
   static String get completionsTable => completionsCollection;
+  static String get completionsCollectionId => completionsCollection;
+  static String get habitCompletionsTable => habitCompletionsCollection;
   static String get evidenceTable => evidenceCollection;
   static String get environmentTable => environmentCollection;
   static String get insightsTable => insightsCollection;
@@ -39,7 +43,6 @@ class DatabaseConstants {
   static String get identitiesTable => identitiesCollection;
   static String get affirmationsTable => affirmationsCollection;
   static String get notificationsTable => notificationsCollection;
-  static String get habitCompletionsTable => habitCompletionsCollection;
   static String get userSettingsTable => userSettingsCollection;
   static String get identityScoresTable => identityScoresCollection;
   static String get scoreHistoryTable => scoreHistoryCollection;

@@ -147,7 +147,7 @@ class _HabitCreationView extends StatelessWidget {
           const SizedBox(height: 16),
           CustomTextField(
             label: '4. Reward (Benefit) *',
-            hint: 'What's your reward? e.g., Feel accomplished and healthy',
+            hint: 'What\'s your reward? e.g., Feel accomplished and healthy',
             initialValue: state.reward,
             maxLines: 2,
             onChanged: (value) {
