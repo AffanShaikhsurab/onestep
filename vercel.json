@@ -6,6 +6,10 @@
   "devCommand": "flutter run -d web-server --web-hostname=0.0.0.0 --web-port=3000",
   "routes": [
     {
+      "src": "/(.+\\.(js|wasm|css|png|jpg|jpeg|gif|ico|svg|json|webp|woff|woff2|ttf|eot))",
+      "dest": "/$1"
+    },
+    {
       "src": "/(.*)",
       "dest": "/index.html"
     }
