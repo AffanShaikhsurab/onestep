@@ -1,8 +1,8 @@
 {
-  "buildCommand": "flutter build web --release --dart-define=APPWRITE_ENDPOINT=$APPWRITE_ENDPOINT --dart-define=APPWRITE_PROJECT_ID=$APPWRITE_PROJECT_ID --dart-define=APPWRITE_DATABASE_ID=$APPWRITE_DATABASE_ID --dart-define=APPWRITE_API_KEY=$APPWRITE_API_KEY --dart-define=GEMINI_API_KEY=$GEMINI_API_KEY",
+  "buildCommand": "$HOME/flutter/bin/flutter build web --release --dart-define=APPWRITE_ENDPOINT=$APPWRITE_ENDPOINT --dart-define=APPWRITE_PROJECT_ID=$APPWRITE_PROJECT_ID --dart-define=APPWRITE_DATABASE_ID=$APPWRITE_DATABASE_ID --dart-define=APPWRITE_API_KEY=$APPWRITE_API_KEY --dart-define=GEMINI_API_KEY=$GEMINI_API_KEY",
   "outputDirectory": "build/web",
   "framework": null,
-  "installCommand": "if [ ! -d $HOME/flutter ]; then git clone https://github.com/flutter/flutter.git $HOME/flutter -b stable; fi && $HOME/flutter/bin/flutter precache --web && $HOME/flutter/bin/flutter pub get",
+  "installCommand": "git clone https://github.com/flutter/flutter.git $HOME/flutter --depth 1 -b stable && export PATH=\"$HOME/flutter/bin:$PATH\" && flutter precache --web && flutter pub get",
   "devCommand": "flutter run -d web-server --web-hostname=0.0.0.0 --web-port=3000",
   "routes": [
     {
