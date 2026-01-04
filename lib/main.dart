@@ -1,6 +1,5 @@
 /// Main entry point for the OneStep application
 import 'package:flutter/material.dart';
-import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'core/core.dart';
@@ -9,14 +8,10 @@ import 'features/authentication/authentication.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   
-  // Load environment variables (optional for web builds)
-  try {
-    await dotenv.load(fileName: "assets/.env");
-  } catch (e) {
-    // Silently fail if .env file is not found (e.g., in web builds)
-    // Environment variables should be set via Vercel environment variables
-    debugPrint('Warning: .env file not found. Using system environment variables.');
-  }
+  // Environment variables are loaded via --dart-define at build time
+  // See build.sh and vercel.json for configuration
+  
+
   
   // Initialize service locator (dependency injection)
   await ServiceLocator.init();
