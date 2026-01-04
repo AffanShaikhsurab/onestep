@@ -201,7 +201,7 @@ void main() {
         'emits [Loading, Unauthenticated] on successful logout',
         setUp: () {
           when(mockAuthService.signOut())
-              .thenAnswer((_) async {});
+              .thenAnswer((_) async => null);
         },
         build: () => AuthenticationBloc(mockAuthService),
         act: (bloc) => bloc.add(AuthenticationLogoutRequested()),
